@@ -60,7 +60,7 @@ linters:
     enabled: true
 
   LeadingZero:
-    enabled: false
+    enabled: true
     style: include_zero
 
   MergeableSelector:
