@@ -9,7 +9,7 @@ linters:
   BangFormat:
     enabled: true
     space_before_bang: true
-    space_after_bang: false
+    space_after_bang: true
 
   BemDepth:
     enabled: true
@@ -20,16 +20,16 @@ linters:
     convention: zero
 
   ChainedClasses:
-    enabled: false
+    enabled: true
 
   ColorKeyword:
     enabled: true
 
   ColorVariable:
-    enabled: false
+    enabled: true
 
   Comment:
-    enabled: false
+    enabled: true
 
   DebugStatement:
     enabled: true
@@ -41,7 +41,7 @@ linters:
     enabled: true
 
   DuplicateProperty:
-    enabled: false
+    enabled: true
 
   ElsePlacement:
     enabled: true
@@ -55,7 +55,7 @@ linters:
     enabled: true
 
   ExtendDirective:
-    enabled: false
+    enabled: true
 
   FinalNewline:
     enabled: true
@@ -76,12 +76,12 @@ linters:
     enabled: true
 
   ImportantRule:
-    enabled: false
+    enabled: true
 
   ImportPath:
     enabled: true
-    leading_underscore: false
-    filename_extension: false
+    leading_underscore: true
+    filename_extension: true
 
   Indentation:
     enabled: true
@@ -94,8 +94,8 @@ linters:
     style: include_zero
 
   MergeableSelector:
-    enabled: false
-    force_nesting: false
+    enabled: true
+    force_nesting: true
 
   NameFormat:
     enabled: true
@@ -114,26 +114,26 @@ linters:
     prefix: _
 
   PropertyCount:
-    enabled: false
+    enabled: true
 
   PropertySortOrder:
-    enabled: false
+    enabled: true
 
   PropertySpelling:
     enabled: true
     extra_properties: []
 
   PropertyUnits:
-    enabled: false
+    enabled: true
 
   PseudoElement:
     enabled: true
 
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: false
-    allow_element_with_class: false
-    allow_element_with_id: false
+    allow_element_with_attribute: true
+    allow_element_with_class: true
+    allow_element_with_id: true
 
   SelectorDepth:
     enabled: true
@@ -149,7 +149,7 @@ linters:
 
   SingleLinePerProperty:
     enabled: true
-    allow_single_line_rule_sets: false
+    allow_single_line_rule_sets: true
 
   SingleLinePerSelector:
     enabled: true
@@ -172,7 +172,7 @@ linters:
     enabled: true
 
   SpaceAroundOperator:
-    enabled: false
+    enabled: true
 
   SpaceBeforeBrace:
     enabled: true
@@ -194,7 +194,7 @@ linters:
     enabled: true
 
   TransitionAll:
-    enabled: false
+    enabled: true
 
   UnnecessaryMantissa:
     enabled: true
@@ -203,13 +203,13 @@ linters:
     enabled: true
 
   UrlFormat:
-    enabled: false
+    enabled: true
 
   UrlQuotes:
     enabled: true
 
   VariableForProperty:
-    enabled: false
+    enabled: true
 
   VendorPrefixes:
     enabled: true
