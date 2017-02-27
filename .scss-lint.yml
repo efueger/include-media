@@ -1,194 +1,95 @@
-scss_files: './'
+# Linter:
+# https://github.com/brigade/scss-lint
+# Lint Defaults:
+# https://github.com/brigade/scss-lint/blob/master/config/default.yml
+# Lint Definitions:
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+
+scss_files: app/assets/stylesheets/
+
+# Excluding our legacy css files
 exclude: [
-  './node_modules/**/*',
-  './sassdoc/**/*',
-  './tests/helpers/*'
+  'app/assets/stylesheets/960.scss',
+  'app/assets/stylesheets/_base.scss',
+  'app/assets/stylesheets/_bootstrap_and_overrides.scss',
+  'app/assets/stylesheets/_legacy-overrides.scss',
+  'app/assets/stylesheets/account.scss',
+  'app/assets/stylesheets/admin_reports.scss',
+  'app/assets/stylesheets/api.scss',
+  'app/assets/stylesheets/application.scss',
+  'app/assets/stylesheets/buttons.scss',
+  'app/assets/stylesheets/cells.scss',
+  'app/assets/stylesheets/dialog.scss',
+  'app/assets/stylesheets/doorkeeper.scss',
+  'app/assets/stylesheets/forms.scss',
+  'app/assets/stylesheets/global.scss',
+  'app/assets/stylesheets/global_scripts.scss',
+  'app/assets/stylesheets/global_scripts_codemirror.css',
+  'app/assets/stylesheets/header.scss',
+  'app/assets/stylesheets/invitations.scss',
+  'app/assets/stylesheets/ip_filters.scss',
+  'app/assets/stylesheets/jquery*',
+  'app/assets/stylesheets/leads.scss',
+  'app/assets/stylesheets/lists.scss',
+  'app/assets/stylesheets/main.scss',
+  'app/assets/stylesheets/page*',
+  'app/assets/stylesheets/preview.scss',
+  'app/assets/stylesheets/primary-nav.scss',
+  'app/assets/stylesheets/reset.scss',
+  'app/assets/stylesheets/select2.scss',
+  'app/assets/stylesheets/static.scss',
+  'app/assets/stylesheets/tables.scss',
+  'app/assets/stylesheets/template-picker.scss',
+  'app/assets/stylesheets/ui.scss',
+  'app/assets/stylesheets/users.scss',
+  'app/assets/stylesheets/codemirror/*',
 ]
+
 linters:
-
-  BangFormat:
-    enabled: true
-    space_before_bang: true
-    space_after_bang: true
-
-  BemDepth:
-    enabled: true
-    max_elements: 1
-
   BorderZero:
     enabled: true
-    convention: zero
-
-  ChainedClasses:
-    enabled: true
-
-  ColorKeyword:
-    enabled: true
+    convention: none
 
   ColorVariable:
-    enabled: true
-
-  Comment:
-    enabled: true
-
-  DebugStatement:
-    enabled: true
+    enabled: false
 
   DeclarationOrder:
-    enabled: true
-
-  DisableLinterReason:
-    enabled: true
-
-  DuplicateProperty:
-    enabled: true
-
-  ElsePlacement:
-    enabled: true
-    style: same_line
-
-  EmptyLineBetweenBlocks:
-    enabled: true
-    ignore_single_line_blocks: true
-
-  EmptyRule:
-    enabled: true
+    enabled: false
 
   ExtendDirective:
     enabled: true
 
-  FinalNewline:
-    enabled: true
-    present: true
-
-  HexLength:
-    enabled: true
-    style: short
-
-  HexNotation:
-    enabled: true
-    style: lowercase
-
-  HexValidation:
-    enabled: true
-
-  IdSelector:
-    enabled: true
-
-  ImportantRule:
-    enabled: true
-
-  ImportPath:
-    enabled: true
-    leading_underscore: true
-    filename_extension: true
-
-  Indentation:
-    enabled: true
-    allow_non_nested_indentation: true
-    character: space
-    width: 2
-
-  LeadingZero:
-    enabled: true
-    style: include_zero
-
   MergeableSelector:
     enabled: true
-    force_nesting: true
-
-  NameFormat:
-    enabled: true
-    convention: hyphenated_lowercase
-    allow_leading_underscore: true
+    force_nesting: false
 
   NestingDepth:
     enabled: true
     max_depth: 1
-
-  PlaceholderInExtend:
-    enabled: true
-
-  PrivateNamingConvention:
-    enabled: true
-    prefix: _
-
-  PropertyCount:
-    enabled: true
+    ignore_parent_selectors: true
 
   PropertySortOrder:
-    enabled: true
-
-  PropertySpelling:
-    enabled: true
-    extra_properties: []
-
-  PropertyUnits:
-    enabled: true
+    enabled: false
 
   PseudoElement:
-    enabled: true
+    enabled: false
 
   QualifyingElement:
     enabled: true
     allow_element_with_attribute: true
     allow_element_with_class: true
-    allow_element_with_id: true
+    allow_element_with_id: false
 
   SelectorDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 2
 
   SelectorFormat:
-    enabled: true
-    convention: hyphenated_lowercase
-    class_convention: '^(?:u|is|has)\-[a-z][a-zA-Z0-9]*$|^(?!u|is|has)[a-zA-Z][a-zA-Z0-9]*(?:\-[a-z][a-zA-Z0-9]*)?(?:\-\-[a-z][a-zA-Z0-9]*)?$'
-
-  Shorthand:
-    enabled: true
-
-  SingleLinePerProperty:
-    enabled: true
-    allow_single_line_rule_sets: true
-
-  SingleLinePerSelector:
-    enabled: true
-
-  SpaceAfterComma:
-    enabled: true
-
-  SpaceAfterPropertyColon:
-    enabled: true
-    style: one_space
-
-  SpaceAfterPropertyName:
-    enabled: true
+    enabled: false
 
   SpaceAfterVariableColon:
     enabled: true
-    style: at_least_one_space
-
-  SpaceAfterVariableName:
-    enabled: true
-
-  SpaceAroundOperator:
-    enabled: true
-
-  SpaceBeforeBrace:
-    enabled: true
-    style: space
-    allow_single_line_padding: true
-
-  SpaceBetweenParens:
-    enabled: true
-    spaces: 0
-
-  StringQuotes:
-    enabled: true
-    style: single_quotes
-
-  TrailingSemicolon:
-    enabled: true
+    style: one_space
 
   TrailingZero:
     enabled: true
@@ -196,26 +97,8 @@ linters:
   TransitionAll:
     enabled: true
 
-  UnnecessaryMantissa:
-    enabled: true
-
-  UnnecessaryParentReference:
-    enabled: true
-
-  UrlFormat:
-    enabled: true
-
-  UrlQuotes:
-    enabled: true
-
   VariableForProperty:
     enabled: true
-
-  VendorPrefixes:
-    enabled: true
-    identifier_list: base
-    include: []
-    exclude: []
-
-  ZeroUnit:
-    enabled: true
+    properties:
+      - color
+      - font
