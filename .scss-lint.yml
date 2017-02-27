@@ -59,6 +59,10 @@ linters:
   ExtendDirective:
     enabled: true
 
+  LeadingZero:
+    enabled: true
+    style: include_zero
+
   MergeableSelector:
     enabled: true
     force_nesting: false
